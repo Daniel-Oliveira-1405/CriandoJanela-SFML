@@ -1,22 +1,22 @@
 #include<iostream>
 #include<SFML/Graphics.hpp>
-/// Incluindo a biblioteca gr·fica do SFML
+/// Incluindo a biblioteca gr√°fica do SFML
 
 using namespace std;
 using namespace sf;
 
 int main()
 {
-    /// RenderWindow -> classe de janela para renderizaÁ„o 2D do SFML
+    /// RenderWindow -> classe de janela para renderiza√ß√£o 2D do SFML
 
     int base=640, altura=480;
     string titulo = "Criando Janela com SFML";
 
     /// Argumentos do contrutor da janela:
-    /// - modo de vÌdeo (VideoMode)
-    /// - tÌtulo
+    /// - modo de v√≠deo (VideoMode)
+    /// - t√≠tulo
     /// - estilo da janela (opcional)
-    /// - ConfiguraÁıes da janela (ContextSettings, opcional)
+    /// - Configura√ß√µes da janela (ContextSettings, opcional)
 
     ContextSettings settings;
     settings.depthBits = 24;
@@ -24,13 +24,13 @@ int main()
     settings.stencilBits = 8;
 
     Uint32 estilo = Style::Default;
-    /// Padr„o: barra de tÌtulo, redimension·vel, com "X"
+    /// Padr√£o: barra de t√≠tulo, redimension√°vel, com "X"
     RenderWindow window(VideoMode(base, altura), titulo, estilo, settings);
 
     /// A janela pode ter outros estilos
 
     /// A janela apareceu e desapareceu logo.
-    /// Para que isso n„o aconteÁa, devemos criar
+    /// Para que isso n√£o aconte√ßa, devemos criar
     /// um loop para a janela.
 
     while(window.isOpen())
@@ -48,9 +48,12 @@ int main()
                     window.close();
             }
             /// Podemos bloquear o fechamento da janela.
-            /// Se o usu·rio clicar no "X" da janela, ela facha.
+            /// Se o usu√°rio clicar no "X" da janela, ela facha.
         }
         window.clear(); /// Limpa o buffer de cores da janela (na Cor preta)
+        /// Podemos modificar a cor que √© usada para limpar o buffer
+        /// window.clear(Color(0, 255, 255));
+        /// window.clear(Color::Red);
         window.display(); /// Exibe o buffer de cores da janela na tela
     }
 }
